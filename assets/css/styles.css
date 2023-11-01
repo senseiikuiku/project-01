@@ -444,40 +444,43 @@ a {
     text-decoration-line: underline;
 }
 
-.course .section-course {
+.course .body-course .section-course {
     margin-top: 79px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 47px;
 }
 
-.course .section-course .card {
-    width: calc(33.33%);
-    flex: 1;
+.course .body-course .section-course .card {
+    padding-bottom: 120px;
     position: relative;
 }
 
+.course .body-course .section-course .card:hover {
+    box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.18);
+}
+
 .course .section-course .card .img-card {
-    width: calc(100% + 2px);
-    overflow: hidden;
     height: 393px;
+    overflow: hidden;
     border-radius: 8px;
 }
 
 .course .section-course .card .image {
     height: 393px;
-    width: calc(100% + 2px);
+    width: 100%;
     object-fit: cover;
     background: #d0efed;
 }
 
 .course .section-course .card .image:hover {
-    opacity: 0.35;
+    opacity: 0.75;
     transform: scale(1.2);
     transition: all 0.5s ease 0s;
 }
 
 .course .section-course .card .introduce {
+    z-index: 1;
     position: absolute;
     top: 315px;
     left: 17px;
@@ -486,6 +489,12 @@ a {
     border-radius: 8px;
     background: #fff;
     box-shadow: 0px 16px 90px 0px rgba(0, 0, 0, 0.05);
+}
+
+.course .section-course .card .introduce:hover {
+    transform: scale(1.2);
+    transition: all 1.2s ease 0s;
+    box-shadow: 1px -4px 39px 14px rgba(0, 0, 0, 0.21);
 }
 
 .course .section-course .card .introduce .heading {
